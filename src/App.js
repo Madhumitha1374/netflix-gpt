@@ -1,11 +1,10 @@
 // import logo from './logo.svg';
-import './App.css';
+import Body from './Components/Body'
+// import './App.css';
 
 function App() {
   return (
-    <div className="App">
-        <h1>Namaste NetFlix Gpt</h1>
-    </div>
+    <Body/>
   );
 }
 

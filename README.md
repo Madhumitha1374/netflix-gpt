@@ -81,7 +81,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - # FEATURES
 - Login/SignUp
     - Sign In/ Sign Up form
+    - Same form for Sign In and Sign Up.
     - redirect to Browse Page
+    - Form Validation
+    - useRef Hook
+    - firebase production
+    - Deploying app to production
+    - Create Signup user Account
+    - implement Sign In user Api
+    - Created Redux Store with userSlice
+    - Implemented Sign Out
+    - Updated profile using firebase
+    - redirected to browse page on Signout
+    
 - Borwse(After authentiction)
     - header
     - Main movie
@@ -92,3 +104,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 - Netflix GPT
     - Seaarch Bar
     - Movie Suggestions
+
+# step by step
+- create components folder
+- create utils folder

@@ -93,7 +93,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
     - Implemented Sign Out
     - Updated profile using firebase
     - redirected to browse page on Signout
-    
+    - bug fix - Signup user display name update
+    - Bug fix - if the user is logged in redirect to browse paage and vise vera
+    - Unsubscribed to the onAuthstage change callback
+    - Add hard coded values and strings to constants files
 - Borwse(After authentiction)
     - header
     - Main movie

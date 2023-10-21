@@ -3,14 +3,12 @@ import Header from './Header'
 import { validateForm } from '../Utils/LoginFormValidation'
 import { createUserWithEmailAndPassword,  signInWithEmailAndPassword, updateProfile} from "firebase/auth";
 import {auth} from '../Utils/firebase'
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../redux/userSlice';
 
 
 function Login() {
     const dispatch = useDispatch()
-    const navigate = useNavigate()
     const [isSignIn, setIsSignIn] = useState(true)
     const [errorMsg, setErrorMsg] = useState();
     const toggleForm = () => {
@@ -23,7 +21,7 @@ function Login() {
     const handleSubmitForm = () => {
         const message = isSignIn ? validateForm( email.current.value, password.current.value) : validateForm(  email.current.value, password.current.value, name.current.value)
         setErrorMsg(message)
-        console.log(message)
+        // console.log(message)
         if(message) return 
         
 
@@ -41,7 +39,6 @@ function Login() {
                 // Profile updated! navigae to browser
                     const {uid, email, displayName} = auth.currentUser
                     dispatch(addUser({uid :uid, email : email, displayName : displayName}))
-                    navigate("/browse")
                 }).catch((error) => {
                 // An error occurred
                 // ...
@@ -63,9 +60,6 @@ function Login() {
                    
                     
                     const user = userCredential.user;
-                    // console.log(user)
-                    navigate("/browse")
-                    // console.log(user)
                 })
                 .catch((error) => {
                     const errorCode = error.code;

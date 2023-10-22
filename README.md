@@ -99,6 +99,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
     - Add hard coded values and strings to constants files
     - Register TMDB API and register your app and get access token
     - get Now playing movies list api from tmbd api
+    - Dispatched new playing movies list to appstore movieSlice
+    - Used customHook to call Api
+    - Building Browse Page
+    - based on movieId calling movie video related list api
+    - use custom hook for video trailer list api call
+    - added trailer to videolist in movieSlice
+    - Displayed trailer, title, description of movie on main page when use login
 
 - Borwse(After authentiction)
     - header

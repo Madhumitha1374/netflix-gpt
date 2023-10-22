@@ -97,6 +97,9 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
     - Bug fix - if the user is logged in redirect to browse paage and vise vera
     - Unsubscribed to the onAuthstage change callback
     - Add hard coded values and strings to constants files
+    - Register TMDB API and register your app and get access token
+    - get Now playing movies list api from tmbd api
+
 - Borwse(After authentiction)
     - header
     - Main movie

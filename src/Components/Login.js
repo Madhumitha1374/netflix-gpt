@@ -5,6 +5,7 @@ import { createUserWithEmailAndPassword,  signInWithEmailAndPassword, updateProf
 import {auth} from '../Utils/firebase'
 import { useDispatch } from 'react-redux';
 import { addUser } from '../redux/userSlice';
+import { NETFLIX_BG } from '../Utils/constants';
 
 
 function Login() {
@@ -23,7 +24,6 @@ function Login() {
         setErrorMsg(message)
         // console.log(message)
         if(message) return 
-        
 
         //SIGN UP
         if(!isSignIn){
@@ -57,8 +57,6 @@ function Login() {
                 signInWithEmailAndPassword(auth, email.current.value, password.current.value)
                 .then((userCredential) => {
                     // Signed in 
-                   
-                    
                     const user = userCredential.user;
                 })
                 .catch((error) => {
@@ -98,7 +96,7 @@ function Login() {
                 <p className="px-1 pt-3 mb-15 text-xs text-slate-500">This page is protected by Google reCAPTCHA to ensure you're not a bot.</p>
             </form>
             <div>
-                <img src='https://assets.nflxext.com/ffe/siteui/vlv3/a73c4363-1dcd-4719-b3b1-3725418fd91d/fe1147dd-78be-44aa-a0e5-2d2994305a13/IN-en-20231016-popsignuptwoweeks-perspective_alpha_website_large.jpg'
+                <img src={NETFLIX_BG}
                 alt = "netflix-bg"
                 className='bg-gradient-to-r from-blue-500 to-transparent'/>
             </div>

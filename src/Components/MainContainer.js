@@ -12,9 +12,10 @@ export const MainContainer = () => {
     // const{title, overview, id} = movies[0];
     const{title, overview, id} = movie;
     return (
-        <div>
-            <VideoBackground movieId = {id}/>
+        <div className='aspect-video w-screen h-screen bg-fuchsia-400'>
             <VideoTitle title = {title} description = {overview}/>
+            <VideoBackground movieId = {id}/>
+            
             
         </div>
     )

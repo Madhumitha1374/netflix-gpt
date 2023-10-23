@@ -52,7 +52,7 @@ function Header() {
                 className='w-48 mx-6 my-1'/>
                 {user && <div>
                      <button onClick={handleSignOut} className='bg-red-700 text-white p-2 m-3 rounded-md'>SignOut</button>
-                     <p>{user.displayName}</p>
+                     <p className='text-white'>{user.displayName}</p>
                 </div>}
             </div>
     )

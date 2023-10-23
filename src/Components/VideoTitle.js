@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const VideoTitle = ({title, description}) => {
     return (
-        <div className=' pt-[20%] w-full pl-[5%] absolute text-white bg-gradient-to-b  from-black'>
+        <div className='pt-[18%] w-full pl-[5%] absolute text-white bg-gradient-to-b  from-black'>
             <h1 className='font-extrabold text-5xl mb-3 w-4/12'>{title}</h1>
             <p className='text-sm w-4/12 font-semibold max-h-36 overflow-hidden'>{description}</p>
             <div>

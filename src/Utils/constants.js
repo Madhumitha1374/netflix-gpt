@@ -7,3 +7,4 @@ export const API_OPTION = {
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzM2ZiZTY0MWNkMGNiMzkyZTM0OGNjYmMwYWNjNjQwZCIsInN1YiI6IjY1MzQwNWNjYWJkYWZjMDBlYjhiZWIyOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.U90l8MAS1JfaQzmTbiyEqd3of31JlQvIylENoXJgprI'
     }
   };
+export const MOVIE_POSTER = "https://image.tmdb.org/t/p/w500/"

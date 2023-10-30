@@ -105,7 +105,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
     - based on movieId calling movie video related list api
     - use custom hook for video trailer list api call
     - added trailer to videolist in movieSlice
-    - Displayed trailer, title, description of movie on main page when use login
+    - Displayed trailer, title, description of movie on main page when user login
+    - get different types od movies api from tmdb and display posters in second container
 
 - Borwse(After authentiction)
     - header

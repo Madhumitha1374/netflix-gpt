@@ -15,7 +15,7 @@ export const MovieContainer = ({title, movie}) => {
             
                     <div className='flex overflow-x-scroll no-scrollbar'>
                     <div className='flex' ref = {ref}>
-                        {movie?.map((m) => <MovieCard posterPath = {m.poster_path} key = {m.id}/>)}
+                        {movie?.map((m) => <MovieCard movie = {m} key = {m.id}/>)}
                     </div>
                     </div>
                     <FontAwesomeIcon icon={faChevronRight} beatFade className='mt-24 font-bold text-lg cursor-pointer p-1'/>

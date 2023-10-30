@@ -1,6 +1,7 @@
 import React from 'react'
 import { MovieContainer } from './MovieContainer'
 import { useSelector } from 'react-redux'
+// import { MovieDetails } from './MovieDetails'
 
 export const SecondContainer = () => {
     const movies = useSelector(store => store.movies)
@@ -13,7 +14,7 @@ export const SecondContainer = () => {
                 <MovieContainer title = {"Top Rated"} movie = {movies?.topRatedMovies}/>
                 <MovieContainer title = {"Upcoming"} movie = {movies?.upcomingMovies}/>
                 <MovieContainer title = {"Trending"} movie = {movies?.trendingMovies}/>
-
+                {/* <MovieDetails/> */}
             </div>
         </div>
     )

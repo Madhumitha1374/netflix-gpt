@@ -107,6 +107,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
     - added trailer to videolist in movieSlice
     - Displayed trailer, title, description of movie on main page when user login
     - get different types od movies api from tmdb and display posters in second container
+    - building search movies page
+    - made search page with multiple languages
+    - registred gor openai
+    - use openai key to get results
+    - displayed results
 
 - Borwse(After authentiction)
     - header

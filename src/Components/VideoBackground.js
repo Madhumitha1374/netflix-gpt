@@ -10,7 +10,7 @@ export const VideoBackground = ({movieId}) => {
     // console.log(trailer)
 
     return (
-        <div>
+        <div >
             <iframe 
                 className="w-screen h-screen bg-cover" 
                 src={"https://www.youtube.com/embed/" + trailer?.key + "?&autoplay=1&mute=1&controls=0&modestbranding=0&playlist=" + trailer?.key + "&loop=1"} 

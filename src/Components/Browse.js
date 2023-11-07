@@ -8,6 +8,7 @@ import useUpcomingMovies from '../Hooks/useUpcomingMovies'
 import useTrendingMovies from '../Hooks/useTrendingMovies'
 import { GptSearch } from './GptSearch'
 import { useSelector } from 'react-redux'
+import { MainPageShimmerUi } from './MainPageShimmerUi'
 
 export const Browse = () => {
     const gpt = useSelector(store => store.gptSearch)

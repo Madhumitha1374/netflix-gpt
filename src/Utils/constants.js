@@ -8,3 +8,11 @@ export const API_OPTION = {
     }
   };
 export const MOVIE_POSTER = "https://image.tmdb.org/t/p/w500/"
+
+//keerthi
+export const OPENAI_API_KEY = "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"
+
+
+// export const OPEN_AI = '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'
+
+// export const OPEN_AI = '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'

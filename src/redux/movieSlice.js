@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { act } from "react-dom/test-utils";
 
 const movieSlice = createSlice({
     name : "movies",
@@ -12,6 +11,8 @@ const movieSlice = createSlice({
         trendingMovies : null,
         movieDetails : null,
         movieCast : null,
+        isFavourite : false,
+        favouriteMovies : [],
     },
     reducers : {
         addNowPlayingMovies : (state, action) => {
@@ -37,11 +38,17 @@ const movieSlice = createSlice({
         },
         addMovieCast : (state, action) => {
             state.movieCast = action.payload
+        },
+        addToFavorite : (state) => {
+            state.isFavourite = !state.isFavourite
+        },
+        addToFavoriteMovies : (state, action) => {
+            state.favouriteMovies.push(action.payload)
         }
     }
 
 })
 
-export const{addNowPlayingMovies, addMovieVideoTrailer, addPopularMovies, addTopRatedMovies, addUpcomingMovies, addTrendingMovies, addMovieDetails,addMovieCast} = movieSlice.actions
+export const{addNowPlayingMovies, addMovieVideoTrailer, addPopularMovies, addTopRatedMovies, addUpcomingMovies, addTrendingMovies, addMovieDetails,addMovieCast, addToFavorite, addToFavoriteMovies} = movieSlice.actions
 
 export default movieSlice.reducer

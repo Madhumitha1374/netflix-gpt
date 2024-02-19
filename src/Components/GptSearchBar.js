@@ -12,28 +12,32 @@ export const GptSearchBar = () => {
     const dispatch = useDispatch()
 
     const getSearchMovie = async(name) =>{
-        console.log(name)
-        const data = await fetch('https://api.themoviedb.org/3/search/movie?query=' + name + '&include_adult=false&page=1', API_OPTION)
-        const json = await data.json()
-        // console.log(json)
-        return json
+        try{
+            console.log(name)
+            const data = await fetch('https://api.themoviedb.org/3/search/movie?query=' + name + '&include_adult=false&page=1', API_OPTION)
+            const json = await data.json()
+            // console.log(json)
+            return json
+        }catch(e){
+            console.log("error" + e)
+        }
     }
 
     const handleSearchButtonClick = async() => {
         const searchQuery = "Act as a movie recommendation system and suggest some movies for the query" + searchText.current.value + "only give me names of 5 movies, comma seperated like the example result given aheaad. Example result : rrr, pushpa, leo, gadhar, bahubali"
         console.log(searchText.current.value)
-            const gptResults = await openai.chat.completions.create({
-              messages: [{ role: 'user', content: searchQuery }],
-              model: 'gpt-3.5-turbo',
-            });
+        const gptResults = await openai.chat.completions.create({
+            messages: [{ role: 'user', content: searchQuery }],
+            model: 'gpt-3.5-turbo',
+        });
           
-            console.log(gptResults.choices[0].message.content);
-            const movieNamesList = gptResults.choices[0].message.content.split(",")
-            const promiseArray = movieNamesList.map((name) => getSearchMovie(name));
-            <SeachPageShimmerUi/>
-            const tmdbSearchResults = await Promise.all(promiseArray)
-            console.log(tmdbSearchResults)
-            dispatch(addSearchMoviesList({movieNames : movieNamesList , moviesList : tmdbSearchResults}));
+        console.log(gptResults.choices[0].message.content);
+        const movieNamesList = gptResults.choices[0].message.content.split(",")
+        const promiseArray = movieNamesList.map((name) => getSearchMovie(name));
+        <SeachPageShimmerUi/>
+        const tmdbSearchResults = await Promise.all(promiseArray)
+        console.log(tmdbSearchResults)
+        dispatch(addSearchMoviesList({movieNames : movieNamesList , moviesList : tmdbSearchResults}));
             
 
     }
@@ -42,9 +46,9 @@ export const GptSearchBar = () => {
     return (
         <div>
             
-            <form className='pt-[15%]  flex justify-center w-full mb-10' onSubmit={(e) =>e.preventDefault() }>
-                <input className='w-6/12 px-3 py-4 rounded-md mr-2' placeholder={LangConstants[language].searchBar} type='text' ref={searchText}/>
-                <button className='w-2/12 bg-red-700 text-white px-1 rounded-md' onClick={handleSearchButtonClick} type='submit'>{LangConstants[language].searchBtn}</button>    
+            <form className='pt-[50%] md:pt-[15%]  flex justify-center w-full mb-10' onSubmit={(e) =>e.preventDefault() }>
+                <input className='md:w-6/12 w-7/12 md:px-3 px-2 py-4 rounded-md mr-2' placeholder={LangConstants[language].searchBar} type='text' ref={searchText}/>
+                <button className='md:w-2/12 w-3/12 bg-red-700 text-white px-1 rounded-md' onClick={handleSearchButtonClick} type='submit'>{LangConstants[language].searchBtn}</button>    
             </form>
             {/* <div>
             <img src={NETFLIX_BG}

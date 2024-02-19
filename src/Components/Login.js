@@ -68,9 +68,9 @@ function Login() {
     }
 
     return (
-        <div>
+        <div className='flex justify-center'>
             <Header/>
-            <form onSubmit={(e) => e.preventDefault()} className= 'px-16 py-16 text-white bg-black flex flex-col w-4/12  absolute right-[37.5%] left-[32.5%] top-[10%] bg-opacity-80'>
+            <form onSubmit={(e) => e.preventDefault()} className= 'md:px-16 sm:px-10 px-8 py-16 text-white bg-black flex flex-col md:w-4/12 sm:w-6/12 w-11/12  absolute md:right-[37.5%] md:left-[32.5%] md:top-[10%] bg-opacity-80 mt-[20%] sm:mt-0 md:mt-0'>
                 <h1 className='text-3xl font-semibold m-2 mb-6'>{isSignIn ? "Sign In" : "Sign Up"}</h1>
                 {!isSignIn && <input 
                                 className='w-full my-2 px-5 py-3 bg-slate-800 rounded-md' 
@@ -98,7 +98,7 @@ function Login() {
             <div>
                 <img src={NETFLIX_BG}
                 alt = "netflix-bg"
-                className='bg-gradient-to-r from-blue-500 to-transparent'/>
+                className='bg-gradient-to-r from-blue-500 to-transparent h-screen object-cover'/>
             </div>
             
         </div>

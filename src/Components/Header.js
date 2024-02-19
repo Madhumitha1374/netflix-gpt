@@ -59,11 +59,11 @@ function Header() {
 
     return (
         // <div className='flex justify-between'>
-            <div className='w-full flex fixed justify-between  z-10  bg-gradient-to-b  from-black'>
+            <div className='w-full flex flex-col md:flex-row  fixed justify-between  z-10  bg-gradient-to-b  from-black '>
                 <img src = {NETFLIX_LOGO}
                 alt='netflix-logo'
-                className='w-48 mx-6 my-1'/>
-                {user && <div>
+                className='md:w-48 md:mx-6 my-1  sm:w-32 sm:mx-6 w-32 m-auto ' />
+                {user && <div className='m-auto sm:m-0 md:m-0'>
                     {gptSearch.search &&
                     <select className='bg-red-700 text-white p-2 m-3 rounded-md bg-opacity-5 border-0 font-bold' onChange={handleLanguageChange}>
                         

@@ -7,9 +7,11 @@ export const GptSearch = () => {
     return (
         <div>
             <div>
-            <img src={NETFLIX_BG}
+            <img 
+            // src = "C:\Users\madhu\OneDrive\Desktop\madhu-bg"
+            src={NETFLIX_BG}
                 alt = "netflix-bg"
-                className='bg-gradient-to-r from-blue-500 to-transparent fixed h-full w-full -z-10'/>
+                className='bg-gradient-to-r from-blue-500 to-transparent fixed h-full w-full -z-10 object-cover'/>
             </div>
             <GptSearchBar/>
             <GptMovieSuggestions/>

@@ -12,7 +12,7 @@ export const MainContainer = () => {
     const movie =  movies[Math.floor(Math.random() * movies.length)]
     const{title, overview, id} = movie;
     return (
-        <div className='aspect-video w-screen h-screen bg-fuchsia-400 overflow-x-hidden'>
+        <div className='md:aspect-video w-screen md:h-screen overflow-x-hidden'>
             <VideoTitle title = {title} description = {overview}/>
             <VideoBackground movieId = {id}/>
             

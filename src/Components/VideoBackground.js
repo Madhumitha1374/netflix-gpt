@@ -10,9 +10,9 @@ export const VideoBackground = ({movieId}) => {
     // console.log(trailer)
 
     return (
-        <div >
+        <div className="mt-10 sm:mt-0 md:mt-0">
             <iframe 
-                className="w-screen h-screen bg-cover" 
+                className="w-screen h-96 sm:h-screen md:h-screen bg-cover " 
                 src={"https://www.youtube.com/embed/" + trailer?.key + "?&autoplay=1&mute=1&controls=0&modestbranding=0&playlist=" + trailer?.key + "&loop=1"} 
                 title="YouTube video player" 
                 // allowFullScreen="true" 
